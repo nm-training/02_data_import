@@ -1,0 +1,91 @@
+---
+title: "R Imports"
+date: "5/4/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+## Load Packages
+
+```{r}
+library(readr)
+library(haven)
+library(readxl)
+```
+
+## Read Files - I
+
+```{r}
+### Read R Data
+load("./data/cars.rda")
+rds_data <- readRDS("./data/cars.rds")
+
+### Read CSV File
+csv_data <- read_csv("./data/cars.csv")
+```
+
+## Read Files - II
+
+```{r}
+### Read Excel Data
+excel_data <- read_excel("./data/cars.xlsx")
+
+# Read SAS Data
+sas_data <- read_sas("./data/cars.sas7bdat")
+
+### Read SPSS Data 
+spss_data <- read_sav("./data/cars.sav")
+
+### Read Stata Files
+stata_data <- read_dta("./data/cars.dta")
+```
+
+
+## Write Files - I
+
+```{r}
+install.packages("writexl")
+
+library(readr)
+library(writexl)
+library(haven)
+```
+
+```{r}
+# write to RDA
+save(cars, file = "./data/cars_data.rda")
+
+# write to RDS
+saveRDS(cars, "./data/cars_data.rds")
+
+# write to CSV
+write_csv(cars, "./data/cars_data.csv")
+```
+
+## Write Files - II
+
+```{r}
+# write to Excel 
+write_xlsx(cars, "./data/cars_data.xlsx")
+
+# write to SAS
+write_sas(cars, "./data/cars_data.sas7bdat")
+
+# write to SPSS
+write_sav(cars, "./data/cars_data.sav")
+
+# write to Stata
+write_dta(cars, "./data/cars_data.dta")
+```
+
+
+
+
+
