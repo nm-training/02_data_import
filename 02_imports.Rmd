@@ -24,27 +24,27 @@ library(readxl)
 
 ```{r}
 ### Read R Data
-load("./data/cars.rda")
-rds_data <- readRDS("./data/cars.rds")
+load("./data/cars")
+rds_data <- readRDS("./data/cars")
 
 ### Read CSV File
-csv_data <- read_csv("./data/cars.csv")
+csv_data <- read_("./data/cars")
 ```
 
 ## Read Files - II
 
 ```{r}
 ### Read Excel Data
-excel_data <- read_excel("./data/cars.xlsx")
+excel_data <- read_("./data/cars")
 
 # Read SAS Data
-sas_data <- read_sas("./data/cars.sas7bdat")
+sas_data <- read_("./data/cars")
 
 ### Read SPSS Data 
-spss_data <- read_sav("./data/cars.sav")
+spss_data <- read_("./data/cars")
 
 ### Read Stata Files
-stata_data <- read_dta("./data/cars.dta")
+stata_data <- read_("./data/cars")
 ```
 
 
@@ -60,32 +60,27 @@ library(haven)
 
 ```{r}
 # write to RDA
-save(cars, file = "./data/cars_data.rda")
+save(cars, file = "./data/cars_data")
 
 # write to RDS
-saveRDS(cars, "./data/cars_data.rds")
+saveRDS(cars, "./data/cars_data")
 
 # write to CSV
-write_csv(cars, "./data/cars_data.csv")
+write_(cars, "./data/cars_data")
 ```
 
 ## Write Files - II
 
 ```{r}
 # write to Excel 
-write_xlsx(cars, "./data/cars_data.xlsx")
+write_(cars, "./data/cars_data")
 
 # write to SAS
-write_sas(cars, "./data/cars_data.sas7bdat")
+write_(cars, "./data/cars_data")
 
 # write to SPSS
-write_sav(cars, "./data/cars_data.sav")
+write_(cars, "./data/cars_data")
 
 # write to Stata
-write_dta(cars, "./data/cars_data.dta")
+write_(cars, "./data/cars_data")
 ```
-
-
-
-
-
